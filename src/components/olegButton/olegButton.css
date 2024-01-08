@@ -1,0 +1,13 @@
+.oleg-button {
+    width: 100px;
+    height: 100px;
+
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.oleg-button__title {
+    display: flex;
+}

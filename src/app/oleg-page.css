@@ -1,0 +1,8 @@
+.oleg-page {
+    background-color: #202124;
+}
+
+.oleg-page__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

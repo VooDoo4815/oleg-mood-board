@@ -3,20 +3,26 @@ import { Phrase } from "@/configs/phrases";
 import "./olegButton.css";
 interface OlegButtonProps extends Phrase {}
 
-const synth = window.speechSynthesis;
+const stopOther = () => {
+    window.speechSynthesis.cancel();
+};
+
 function OlegButton(props: OlegButtonProps) {
     const { title, text } = props;
 
     const onClick = () => {
+        stopOther();
+        const synth = window.speechSynthesis;
         const utter = new SpeechSynthesisUtterance(text);
 
-        utter.voice = synth.getVoices()[0];
+        utter.voice = synth.getVoices()[4];
+        utter.rate = 1.2;
 
         synth.speak(utter);
     };
 
     return (
-        <div className="oleg-button rounded flex-auto m-0.5 bg-yellow-600" onClick={onClick}>
+        <div className="oleg-button rounded" onClick={onClick}>
             <span className="oleg-button__title">{title}</span>
         </div>
     );

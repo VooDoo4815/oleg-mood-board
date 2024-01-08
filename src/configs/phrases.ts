@@ -33,11 +33,11 @@ export const phrases: Phrase[] = [
         title: "чувствую",
     },
     {
-        text: "сомнительно, но okaэээy",
+        text: "сомнительно, но окэээй",
         title: "сомнительно",
     },
     {
-        text: "It’s okey",
+        text: "It’s окЕй",
         title: "okey",
     },
     {

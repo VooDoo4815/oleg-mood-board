@@ -1,11 +1,19 @@
 .oleg-button {
-    width: 100px;
+    width: 150px;
     height: 100px;
 
-    align-content: center;
+    display: flex;
+
     align-items: center;
     justify-content: center;
-    text-align: center;
+
+    margin: 10px;
+
+    border: rgb(255, 255, 255, 0.5) solid 1px;
+}
+
+.oleg-button:hover {
+    box-shadow: 1px 1px 2px 2px rgb(255, 255, 255, 0.25), -1px -1px 2px 2px rgb(255, 255, 255, 0.25);
 }
 
 .oleg-button__title {

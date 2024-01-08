@@ -7,18 +7,30 @@ const stopOther = () => {
     window.speechSynthesis.cancel();
 };
 
+const speakPhrase = (phrase: string) => {
+    const synth = window.speechSynthesis;
+    const utter = new SpeechSynthesisUtterance(phrase);
+
+    const getVoice = () => {
+        const defaultVoice = synth.getVoices()[0];
+
+        const russianVoice = synth.getVoices().find((voice) => voice.name.includes("Russian"));
+
+        return russianVoice ?? defaultVoice;
+    };
+
+    utter.voice = getVoice();
+    utter.rate = 1.2;
+
+    synth.speak(utter);
+};
+
 function OlegButton(props: OlegButtonProps) {
     const { title, text } = props;
 
     const onClick = () => {
         stopOther();
-        const synth = window.speechSynthesis;
-        const utter = new SpeechSynthesisUtterance(text);
-
-        utter.voice = synth.getVoices()[4];
-        utter.rate = 1.2;
-
-        synth.speak(utter);
+        speakPhrase(text);
     };
 
     return (

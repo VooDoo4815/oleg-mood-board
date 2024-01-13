@@ -34,7 +34,7 @@ function OlegButton(props: OlegButtonProps) {
     };
 
     return (
-        <div className="oleg-button rounded" onClick={onClick}>
+        <div className="oleg-button rounded container" onClick={onClick}>
             <span className="oleg-button__title">{title}</span>
         </div>
     );

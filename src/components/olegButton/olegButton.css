@@ -9,14 +9,13 @@
 
     margin: 10px;
 
-    border: rgb(255, 255, 255, 0.5) solid 1px;
+    border: var(--border-color) solid 1px;
 }
 
 .oleg-button:hover {
-    box-shadow: 1px 1px 2px 2px rgb(255, 255, 255, 0.25), -1px -1px 2px 2px rgb(255, 255, 255, 0.25);
+    box-shadow: 1px 1px 2px 2px var(--border-color), -1px -1px 2px 2px var(--border-color);
 }
 
 .oleg-button__title {
-    color: #ffffff;
     display: flex;
 }

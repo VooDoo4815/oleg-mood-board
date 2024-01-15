@@ -10,7 +10,6 @@ const nextConfig = {
                 {
                     loader: require.resolve("url-loader"),
                     options: {
-                        limit: config.inlineImageLimit,
                         fallback: require.resolve("file-loader"),
                         publicPath: `${config.assetPrefix}/_next/static/audio/`,
                         outputPath: `${isServer ? "../" : ""}static/audio/`,

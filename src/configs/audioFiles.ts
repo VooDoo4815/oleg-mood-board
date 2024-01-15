@@ -1,4 +1,3 @@
-"use server";
 export const olegFiles = async () => [
     "А потом они идут стиральные машины вырывают.webm",
     "Блять я заплакал.webm",

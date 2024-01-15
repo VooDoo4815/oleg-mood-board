@@ -8,7 +8,9 @@ export default async function Page() {
     return (
         <main className="flex min-h-screen flex-col items-center p-24 oleg-page">
             <span>Какой ты Олег?</span>
-            <OlegPhrases olegFiles={files} />
+            <section className="oleg-page__body">
+                <OlegPhrases olegFiles={files} />
+            </section>
         </main>
     );
 }

@@ -1,0 +1,31 @@
+.oleg-image{
+
+    width: 40vw;
+
+    z-index: 100;
+    position: relative;
+    transform: rotate(90deg);
+    animation: appear 0.5s;
+}
+
+.oleg-image__container{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100%) rotate(90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+}

@@ -1,20 +1,31 @@
 "use client";
 import OlegButton from "@/components/olegButton/olegButton";
+import OlegRandomImage from "@/components/olegRandomImage/olegRandomImage";
+import { useCallback, useState } from "react";
 
 export default function OlegPhrases({ olegFiles }: { olegFiles: string[] }) {
+    const [showImage, setShowImage] = useState(false);
+
+    const playAudio = useCallback((fileName: string) => {
+        const audio = new Audio();
+        audio.src = "audio/" + fileName;
+        audio.play().then(() => {
+            setShowImage(false);
+            setShowImage(true);
+        });
+        audio.addEventListener("ended", () => {
+            setShowImage(false);
+        });
+    }, []);
+
     return (
-        <section className="oleg-page__body">
+        <>
+            {showImage && <OlegRandomImage />}
             {olegFiles.map((fileName) => {
                 return (
                     <OlegButton title={fileName.split(".")[0]} onInteract={() => playAudio(fileName)} key={fileName} />
                 );
             })}
-        </section>
+        </>
     );
 }
-
-const playAudio = (fileName: string) => {
-    const audio = new Audio();
-    audio.src = "audio/" + fileName;
-    audio.play();
-};

@@ -10,11 +10,10 @@ export default function OlegPhrases({ olegFiles }: { olegFiles: string[] }) {
         const audio = new Audio();
         audio.src = "audio/" + fileName;
         audio.play().then(() => {
-            setShowImage(false);
             setShowImage(true);
-        });
-        audio.addEventListener("ended", () => {
-            setShowImage(false);
+            setTimeout(() => {
+                setShowImage(false);
+            }, 1900);
         });
     }, []);
 

@@ -5,7 +5,7 @@
     z-index: 100;
     position: relative;
     transform: rotate(90deg);
-    animation: appear 0.5s;
+    animation: appear 2s;
 }
 
 .oleg-image__container{
@@ -20,12 +20,20 @@
 
 
 @keyframes appear {
-    from {
+    0% {
         opacity: 0;
         transform: translateX(-100%) rotate(90deg);
     }
-    to {
+    25% {
         opacity: 1;
-        transform: rotate(90deg);
+        transform: rotate(85deg);
+    }
+    75% {
+        opacity: 1;
+        transform: rotate(95deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(90deg);
     }
 }

@@ -8,6 +8,14 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 export const metadata: Metadata = {
     title: "Мудборд Олег",
     description: "Сделано для души",
+    openGraph: {
+        siteName: "Мудборд Олег",
+        title: "Мудборд Олег",
+        description: "Какой ты Олег?",
+        url: "https://voodoo4815.github.io/oleg-mood-board/",
+        type: "website",
+        images: [{ url: "https://voodoo4815.github.io/oleg-mood-board/images/oleg-1.webp" }],
+    },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

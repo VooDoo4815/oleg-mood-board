@@ -3,5 +3,9 @@
   "short_name": "Мудборд",
   "start_url": "https://voodoo4815.github.io/oleg-mood-board/",
   "display": "standalone",
-  "description": "Сайт-шутка"
+  "description": "Сайт-шутка",
+  "icons": [{
+    "src": "images/logo144x144.png",
+    "sizes": "144x144"
+  }]
 }

@@ -8,7 +8,7 @@ function OlegButton(props: OlegButtonProps) {
     const { title = "", onInteract = () => {} } = props;
 
     return (
-        <button className="oleg-button rounded container" onClick={onInteract}>
+        <button className="oleg-button rounded container" onClick={onInteract} title={title}>
             {title}
         </button>
     );

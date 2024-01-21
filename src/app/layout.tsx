@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         description: "Какой ты Олег?",
         url: "https://voodoo4815.github.io/oleg-mood-board/",
         type: "website",
-        images: [{ url: "https://voodoo4815.github.io/oleg-mood-board/images/oleg-1.webp" }],
+        images: [{ url: "https://voodoo4815.github.io/oleg-mood-board/images/oleg-1.webp", height: 300, width: 300 }],
     },
 };
 

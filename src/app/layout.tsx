@@ -22,6 +22,7 @@ export const metadata: Metadata = {
             },
         ],
     },
+    manifest: "https://voodoo4815.github.io/oleg-mood-board/manifest.json",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
